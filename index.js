@@ -8,11 +8,13 @@ const menu = {
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
+    const menuSection = document.getElementById('menu');
 
     // Loop through each category and its items in the menu object
+    for (let category in menu) {
 
         // Create an element to represent the category
-
+        let categoryElement = document.createElement('h3');
         // Set the text content of the category element to the category name
 
         // Append the category element to the menu container
