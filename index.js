@@ -5,18 +5,21 @@ const menu = {
     Desserts: ["Tiramisu", "Cheesecake"]
 };
 
-// Sample prices for menu items
+// created sample prices for menu item
 const prices = {
-    "Garlic Bread": 10.50,
+    "Garlic Bread": 10.50,// created item property and number
     "Bruschetta": 17.00,
     "Margherita Pizza": 75.00,
     "Spaghetti Carbonara": 35.00,
     "Tiramisu": 20.00,
-    "Cheesecake": 18.50
+    "Cheesecake": 20.00,
 };
 
-// Function to display menu items by category
-function displayMenuItems(menu) {
+// Function to display menu items by category 
+// This function will dynamically generate and display the menu items on the page, 
+// allowing users to click on items to add them to their order.//
+
+function displayMenuItems(menu) {   //Creates categories and lists menu items under each category
     // Get the menu container element from the HTML
     const menuContainer = document.getElementById('menu');
 
@@ -49,7 +52,7 @@ function displayMenuItems(menu) {
 }
 
 // Callback function for adding an item to the order
-function addToOrder(itemName) {
+function addToOrder(itemName) { //Adds selected items to the order list and updates the total price based on predefined prices above
     // Get the order items list and the order total element from the HTML
     const orderItemsList = document.getElementById('order-items');
     const orderTotalElement = document.getElementById('order-total');
@@ -62,7 +65,7 @@ function addToOrder(itemName) {
     orderItemsList.appendChild(orderItemElement);
 
     // Calculate and update the total price
-    const itemPrice = prices [itemName];
+    const itemPrice = prices [itemName];// specifies parameter regarding itemprice and number
     let currentTotal = parseFloat(orderTotalElement.textContent);
     currentTotal += itemPrice;
 
