@@ -7,12 +7,12 @@ const menu = {
 
 // Sample prices for menu items
 const prices = {
-    "Garlic Bread": 5.00,
-    "Bruschetta": 6.00,
-    "Margherita Pizza": 12.00,
-    "Spaghetti Carbonara": 14.00,
-    "Tiramisu": 7.00,
-    "Cheesecake": 6.50
+    "Garlic Bread": 10.50,
+    "Bruschetta": 17.00,
+    "Margherita Pizza": 75.00,
+    "Spaghetti Carbonara": 35.00,
+    "Tiramisu": 20.00,
+    "Cheesecake": 18.50
 };
 
 // Function to display menu items by category
