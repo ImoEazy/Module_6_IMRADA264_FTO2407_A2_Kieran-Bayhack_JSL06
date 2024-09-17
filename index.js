@@ -58,26 +58,26 @@ function addToOrder(itemName) { //function is called when menu item is clicked.A
     const orderTotalElement = document.getElementById('order-total');
 
     // Create a list item for the order
-    const orderItemElement = document.createElement('li');// create new list item <li> for selected items then adds to order item list
+    const orderItemElement = document.createElement('li');// create new list item <li> for selected items,
     orderItemElement.textContent = itemName;
 
     // Append the list item to the order items list
-    orderItemsList.appendChild(orderItemElement);
+    orderItemsList.appendChild(orderItemElement);//then adds to order item list
 
     // Calculate and update the total price
-    const itemPrice = prices [itemName];// specifies parameter regarding itemprice and number
-    let currentTotal = parseFloat(orderTotalElement.textContent);
-    currentTotal += itemPrice;
+    const itemPrice = prices [itemName];// fetches price of item from 'prices' object
+    let currentTotal = parseFloat(orderTotalElement.textContent);//adds the price to current total html element
+    currentTotal += itemPrice;//updates total price displayed
 
     // Update the text content of the order total element with the new total
-    orderTotalElement.textContent = currentTotal.toFixed(2);
+    orderTotalElement.textContent = currentTotal.toFixed(2);//updates total price displayed to fixed two decimal
 }
 
 // Function to initialize the menu system
-function initMenuSystem(menu) {
+function initMenuSystem(menu) {//  this function initializes menu system by calling 'displayMenuItems' to render menu
     // Call the function to display menu items
     displayMenuItems(menu);
 }
 
 // Start the menu system by calling the init function
-initMenuSystem(menu);
+initMenuSystem(menu);//this is called to start off the process
